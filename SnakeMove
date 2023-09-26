@@ -14,7 +14,7 @@ public class SnakeMove : MonoBehaviour
     void Start()
     {
         segments = new List<Transform>();  //create a new list
-        segments.Add(Transform);           //add the head of the snake to the list
+        segments.Add(transform);           //add the head of the snake to the list
      }
 
     // Update is called once per frame
