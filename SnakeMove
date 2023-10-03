@@ -42,10 +42,10 @@ public class SnakeMove : MonoBehaviour
     //FixedUpdate is called at a fix interval
     void FixedUpdate()
     {
-       //move the body of the snake
-       for (int i = segments.Count - 1;i >= 0; i--)              //for each segment of the snake
+        //move the body of the snake
+        for (int i = segments.Count - 1; i > 0; i--)              //for each segment of the snake
         {
-            segments[i].position = segments[i].position;         //move the body
+            segments[i].position = segments[i - 1].position;         //move the body
         }
 
         //move the snake
@@ -69,6 +69,10 @@ public class SnakeMove : MonoBehaviour
         if (other.tag == "food")
         {
             Gorw();
+        }
+        else if (other.tag == "dead")
+        {
+            Debug.Log("Hit");
         }
     }
 }
