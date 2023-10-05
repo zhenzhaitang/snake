@@ -90,6 +90,7 @@ public class SnakeMove : MonoBehaviour
         if (other.tag == "food")    //check if the otner objects is food
         {
             Gorw();                 //tun the frow function
+            Time.fixDeltaTime -= 0.01f;
         }
         else if (other.tag == "dead")      //checks if the other objects is an dead
         {
